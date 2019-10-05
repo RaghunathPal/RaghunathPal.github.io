@@ -1,0 +1,15 @@
+<html>
+<body>
+    <input type="text" id="userInput"=>give me input</input>
+    <button onclick="test()">Submit</button>
+    <script>
+        function test()
+        {
+            var userInput = document.getElementById("userInput").value
+            var go = "http://127.0.0.1:8000/app1/"+userInput;
+            window.location =go ;
+
+        }
+    </script>
+</body>
+</html>

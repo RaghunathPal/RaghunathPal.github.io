@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>PERSONALISED NEWS</title>  
+</head>
+    
+    <style>/** functionable **/
+#wrapper {
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+#wrapper .box {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+#wrapper .justify {
+  display: inline-block;
+  width: 100%;
+}
+
+/** just for preview **/
+body {
+  background-color: lemonchiffon;
+}
+body #wrapper {
+  background-color: lavender;
+  height: 100px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%;
+  border:solid;
+  border-width: 5px;
+  border-color: black;
+}
+body #wrapper .box {
+  background-color: antiquewhite;
+  height: 100px;
+  width: 100px;
+  border:solid;
+  border-width: 2px;
+  border-color: black;
+}
+        /** functionable **/
+#wrapper {
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+  
+  .box {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+  }
+  .justify {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+/** just for preview **/
+body {
+  background-color: lemonchiffon;
+  
+  #wrapper {
+    background-color: snow;
+    height: 100px;
+    margin: 0 auto;
+    padding: 50px 50px;
+    width: 50%;
+    
+    .box {
+      background-color:snow ;
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+ </style>
+
+<body>
+    <center><H1 style="color: darkred; background-color: lightsalmon; width:55%; font-size: 75px;">X-NEWS 365 </H1></center>
+    <center><h1 style="color: darkorange; background-color: navajowhite; width:40%; font-size: 50px;">PERSONALISED NEWS TOPICS</h1></center>
+  <div id="wrapper">
+     
+      {%for i in trending%}
+      
+      <div class="box"><center><a href={{i.url}} style="text-decoration:none;" ><h3 style="color: black;">{{i.word}}</h3>   </a></center></div>
+   
+          {% endfor %}
+      
+  <i class="justify"></i>
+</div>
+
+
+</body>
+
+</html>
